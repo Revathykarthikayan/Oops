@@ -1,8 +1,8 @@
 class Television:
     brand = "Sony"
     price = 285000
-    inches = 75
-    OnOff = "OnOff"
+    inches = 75 
+ 
 
     def __init__(self, channel=1, volume=50):
         self.channel = channel
@@ -62,18 +62,20 @@ led_tv = LEDTV(channel=10, volume=30, screen_thickness=4)
 plasma_tv = PlasmaTV(channel=15, volume=25, screen_thickness=6)
 print(led_tv.info())
 print("Status of LED TV:")
-
+#given channel no. out of range for led
 print(led_tv.set_channel(89))
 print(led_tv.set_volume(45))
 print()
 
-
 print(plasma_tv.info())
 print("Status of Plasma TV:")
+#given volume out of range for plasma
 
 print(plasma_tv.set_channel(34))
 print(plasma_tv.set_volume(120))
+print()
 # reseting LED TV
+print("LED RESET IS DONE")
 print(led_tv.reset())
 
 
